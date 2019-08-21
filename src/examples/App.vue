@@ -4,7 +4,7 @@
     <h1>Vue adapter for the Froala WYSIWYG editor</h1>
     <div class="sample">
       <h2>Sample 1: Inline Edit</h2>
-      <froala :config="titleOptions" v-model="myTitle"></froala>
+      <froala :config="config" v-model="myTitle"></froala>
       <input v-model="myTitle"/>
     </div>
 
@@ -74,7 +74,11 @@ export default {
 
       // Sample 1
       myTitle: '',
+      config: {
+        toolbarButtons: ['embedly'],
+      },
       titleOptions: {
+        
         placeholderText: 'Edit Your Content Here!',
         charCounterCount: false,
         toolbarInline: true,
